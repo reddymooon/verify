@@ -100,7 +100,7 @@ if ($httpcode >= 200 && $httpcode < 300) {
         $userData = json_decode($userResponse, true);
         $username = $userData['username'] ?? 'sconosciuto';
         $discriminator = $userData['discriminator'] ?? '0000';
-        $tag = $username . '#' . $discriminator;
+        $tag = $username;
 
         // Redireziona con username nel GET
         header("Location: https://" . getenv('DOMAIN') . "/settings.html?username=" . urlencode($tag));
