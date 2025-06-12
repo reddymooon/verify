@@ -103,7 +103,7 @@ if ($httpcode >= 200 && $httpcode < 300) {
         $tag = $username;
 
         // Redireziona con username nel GET
-        header("Location: https://" . getenv('DOMAIN') . "/settings.html?username=" . urlencode($tag) . "&userid=" . $userid);
+        header("Location: https://" . getenv('DOMAIN') . "/settings.php?username=" . urlencode($tag) . "&userid=" . $userid);
         exit;
     } else {
         echo json_encode(["error" => "Impossibile recuperare utente", "dettaglio" => $userResponse]);
