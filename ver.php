@@ -44,9 +44,9 @@ $botToken = getenv('BOT_TOKEN');
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json");
 
-$guildid = $_POST['guildid'] ?? null;
-$userid = $_POST['userid'] ?? null;
-$roleid = $_POST['roleid'] ?? null;
+$guildid = $_GET['guildid'] ?? null;
+$userid = $_GET['userid'] ?? null;
+$roleid = $_GET['roleid'] ?? null;
 
 if (!$guildid || !$userid || !$roleid) {
     http_response_code(400);
