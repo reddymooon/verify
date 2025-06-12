@@ -12,7 +12,7 @@
       exit;
   }
 
-$botToken = $_POST['id'];
+$botToken = getenv('BOT_TOKEN');
   if (!$botToken) {
       http_response_code(500);
       echo json_encode(["error" => "Token bot non configurato"]);
