@@ -48,7 +48,7 @@ $guildid = $_GET['guildid'] ?? null;
 $userid = $_GET['userid'] ?? null;
 $roleid = $_GET['roleid'] ?? null;
 
-$chaf = $_GET['ChAf'];
+$chaf = $_GET['ChAf'] ?? null;
 $chafConfronto = ((int)$guildid + (int)$userid + (int)$roleid)/100;
   
 if ($chaf!=$chafConfronto) {
