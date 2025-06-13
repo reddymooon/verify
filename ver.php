@@ -48,6 +48,14 @@ $guildid = $_GET['guildid'] ?? null;
 $userid = $_GET['userid'] ?? null;
 $roleid = $_GET['roleid'] ?? null;
 
+$chaf = $_GET['ChAf'];
+$chafConfronto = ((int)$guildid + (int)$userid + (int)$roleid)/100;
+  
+if ($chaf!=$chafConfronto) {
+    echo 'non autorizzato';
+    exit;
+}
+
 if (!$guildid || !$userid || !$roleid) {
     http_response_code(400);
     echo json_encode(["error" => "Parametri mancanti"]);
